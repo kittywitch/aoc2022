@@ -13,6 +13,7 @@
     {
       # enter this python environment by executing `nix shell .`
       defaultPackage = forAllSystems (system: pkgs: mach-nix.lib."${system}".mkPython {
+        python = "python310";
         requirements = ''
         '';
       });
